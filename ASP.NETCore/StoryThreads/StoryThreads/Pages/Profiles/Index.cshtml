@@ -1,0 +1,132 @@
+﻿@page
+@model StoryThreads.Pages.Profiles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Prefix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].FirstNames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].MiddleNames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Suffix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Degrees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].MetricHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].MetricWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].HairColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].EyeColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Complextion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile[0].ModifiedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Profile) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstNames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleNames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Suffix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degrees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetricHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetricWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HairColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complextion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ProfileId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ProfileId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ProfileId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

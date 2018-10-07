@@ -1,0 +1,124 @@
+﻿@page
+@model StoryThreads.Pages.Profiles.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Profile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Prefix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Prefix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.FirstNames)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.FirstNames)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.MiddleNames)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.MiddleNames)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Surname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Surname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Suffix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Suffix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Degrees)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Degrees)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Age)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Sex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Sex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.MetricHeight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.MetricHeight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.MetricWeight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.MetricWeight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.HairColor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.HairColor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.EyeColor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.EyeColor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Complextion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Complextion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.ModifiedDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Profile.ProfileId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

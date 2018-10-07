@@ -1,0 +1,115 @@
+﻿@page
+@model StoryThreads.Pages.Profiles.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Profile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Profile.ProfileId" />
+            <div class="form-group">
+                <label asp-for="Profile.Prefix" class="control-label"></label>
+                <input asp-for="Profile.Prefix" class="form-control" />
+                <span asp-validation-for="Profile.Prefix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.FirstNames" class="control-label"></label>
+                <input asp-for="Profile.FirstNames" class="form-control" />
+                <span asp-validation-for="Profile.FirstNames" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.MiddleNames" class="control-label"></label>
+                <input asp-for="Profile.MiddleNames" class="form-control" />
+                <span asp-validation-for="Profile.MiddleNames" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Surname" class="control-label"></label>
+                <input asp-for="Profile.Surname" class="form-control" />
+                <span asp-validation-for="Profile.Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Suffix" class="control-label"></label>
+                <input asp-for="Profile.Suffix" class="form-control" />
+                <span asp-validation-for="Profile.Suffix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Degrees" class="control-label"></label>
+                <input asp-for="Profile.Degrees" class="form-control" />
+                <span asp-validation-for="Profile.Degrees" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Title" class="control-label"></label>
+                <input asp-for="Profile.Title" class="form-control" />
+                <span asp-validation-for="Profile.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Age" class="control-label"></label>
+                <input asp-for="Profile.Age" class="form-control" />
+                <span asp-validation-for="Profile.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Sex" class="control-label"></label>
+                <input asp-for="Profile.Sex" class="form-control" />
+                <span asp-validation-for="Profile.Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.MetricHeight" class="control-label"></label>
+                <input asp-for="Profile.MetricHeight" class="form-control" />
+                <span asp-validation-for="Profile.MetricHeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.MetricWeight" class="control-label"></label>
+                <input asp-for="Profile.MetricWeight" class="form-control" />
+                <span asp-validation-for="Profile.MetricWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.HairColor" class="control-label"></label>
+                <input asp-for="Profile.HairColor" class="form-control" />
+                <span asp-validation-for="Profile.HairColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.EyeColor" class="control-label"></label>
+                <input asp-for="Profile.EyeColor" class="form-control" />
+                <span asp-validation-for="Profile.EyeColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Complextion" class="control-label"></label>
+                <input asp-for="Profile.Complextion" class="form-control" />
+                <span asp-validation-for="Profile.Complextion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.Description" class="control-label"></label>
+                <input asp-for="Profile.Description" class="form-control" />
+                <span asp-validation-for="Profile.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.CreatedDate" class="control-label"></label>
+                <input asp-for="Profile.CreatedDate" class="form-control" />
+                <span asp-validation-for="Profile.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profile.ModifiedDate" class="control-label"></label>
+                <input asp-for="Profile.ModifiedDate" class="form-control" />
+                <span asp-validation-for="Profile.ModifiedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
